@@ -9,18 +9,25 @@
 import Foundation
 import UIKit
 
-class Coordinator {
-    
-    private let window: UIWindow
-    
-    init(window: UIWindow) {
-        self.window = window
-    }
-    
-    func start() {
-        let controller = MovieDetailViewController()
-        let navigationController = UINavigationController(rootViewController: controller)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-    }
+protocol Coordinator {
+    var childCoordinators: [Coordinator] { get set }
+    var navigationController: UINavigationController { get set }
+
+    func start()
 }
+
+//class Coordinator {
+//    
+//    private let window: UIWindow
+//    
+//    init(window: UIWindow) {
+//        self.window = window
+//    }
+//    
+//    func start() {
+//        let controller = MovieDetailViewController()
+//        let navigationController = UINavigationController(rootViewController: controller)
+//        window.rootViewController = navigationController
+//        window.makeKeyAndVisible()
+//    }
+//}
