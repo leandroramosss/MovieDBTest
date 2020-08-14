@@ -21,6 +21,10 @@ extension ViewCodeProtocol {
         
     }
     
+    func delegation() {
+        
+    }
+    
     func setUpNavigation() {
         
     }

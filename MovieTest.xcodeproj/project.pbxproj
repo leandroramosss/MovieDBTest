@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520A7D8824E626BB0073F04B /* MovieCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A7D8624E626BB0073F04B /* MovieCustomCell.swift */; };
+		520A7D8924E626BB0073F04B /* MovieCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520A7D8724E626BB0073F04B /* MovieCustomCell.xib */; };
 		52EA399524E5EF100020AD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA399424E5EF100020AD0D /* AppDelegate.swift */; };
 		52EA399724E5EF100020AD0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA399624E5EF100020AD0D /* SceneDelegate.swift */; };
 		52EA399924E5EF100020AD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA399824E5EF100020AD0D /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520A7D8624E626BB0073F04B /* MovieCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCustomCell.swift; sourceTree = "<group>"; };
+		520A7D8724E626BB0073F04B /* MovieCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCustomCell.xib; sourceTree = "<group>"; };
 		52EA399124E5EF100020AD0D /* MovieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EA399424E5EF100020AD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52EA399624E5EF100020AD0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520A7D8424E626620073F04B /* MoviewCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				520A7D8624E626BB0073F04B /* MovieCustomCell.swift */,
+				520A7D8724E626BB0073F04B /* MovieCustomCell.xib */,
+			);
+			path = MoviewCustomCell;
+			sourceTree = "<group>";
+		};
 		52EA398824E5EF100020AD0D = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				52EA39BD24E5FEC40020AD0D /* MovieDetailViewController.swift */,
+				520A7D8424E626620073F04B /* MoviewCustomCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520A7D8924E626BB0073F04B /* MovieCustomCell.xib in Resources */,
 				52EA39A124E5EF150020AD0D /* LaunchScreen.storyboard in Resources */,
 				52EA399E24E5EF150020AD0D /* Assets.xcassets in Resources */,
 				52EA399C24E5EF100020AD0D /* Main.storyboard in Resources */,
@@ -302,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EA399924E5EF100020AD0D /* ViewController.swift in Sources */,
+				520A7D8824E626BB0073F04B /* MovieCustomCell.swift in Sources */,
 				52EA39BE24E5FEC40020AD0D /* MovieDetailViewController.swift in Sources */,
 				52EA39C224E5FF2A0020AD0D /* Coordinator.swift in Sources */,
 				52EA39BC24E5F2B10020AD0D /* MovieDetailModel.swift in Sources */,
