@@ -9,52 +9,74 @@
 import UIKit
 
 class MovieDetailViewController: UIViewController, Storyboarded {
+            
+    @IBOutlet weak var tableView: UITableView!
+    var tableHeaderHeight:CGFloat = 300.0
+    var headerView: UIView!
     
-    let customCell = UINib(nibName: "MovieCustomCell", bundle: nil)
-        
-    @IBOutlet weak var collectionView: UICollectionView!
+    let customCell = UINib(nibName: "MovieDetailTableViewCell", bundle: nil)
         
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setUpLayout()
-        self.collectionView.register(UINib(nibName: "MovieCustomCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        tableView.register(customCell, forCellReuseIdentifier: "cell")
+        tableView.rowHeight = UITableView.automaticDimension
+        headerConfiguration()
+    }
+    
+    func headerConfiguration() {
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        tableView.contentInset = UIEdgeInsets(top: tableHeaderHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
+
     }
     
 }
 
-extension MovieDetailViewController: ViewCodeProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
+extension MovieDetailViewController: ViewCodeProtocol, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieDetailTableViewCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateHeaderView()
+    }
+    
+    func updateHeaderView() {
+        
+        var headerRect = CGRect(x: 0, y: -tableHeaderHeight, width: tableView.bounds.width, height: tableHeaderHeight)
+        if tableView.contentOffset.y < -tableHeaderHeight {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+        
+        headerView.frame = headerRect
+    }
         
     func setUpLayout() {
-        setUpConstraints()
         setUpNavigation()
         delegation()
     }
-        
-    func setUpConstraints() {
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
-    }
-    
+                
     func delegation() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func setUpNavigation() {
         navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1000
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MovieCustomCell
-        return cell
     }
     
 }
