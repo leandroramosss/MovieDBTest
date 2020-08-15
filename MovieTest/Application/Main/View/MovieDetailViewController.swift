@@ -14,6 +14,7 @@ class MovieDetailViewController: UIViewController, Storyboarded {
     var tableHeaderHeight:CGFloat = 300.0
     var headerView: UIView!
     
+    let movieInformationCell = UINib(nibName: "MovieDetailsFirstSectionTableViewCell", bundle: nil)
     let customCell = UINib(nibName: "MovieDetailTableViewCell", bundle: nil)
         
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class MovieDetailViewController: UIViewController, Storyboarded {
         view.backgroundColor = .white
         setUpLayout()
         tableView.register(customCell, forCellReuseIdentifier: "cell")
+        tableView.register(movieInformationCell, forCellReuseIdentifier: "cell2")
         tableView.rowHeight = UITableView.automaticDimension
         headerConfiguration()
     }
@@ -38,12 +40,18 @@ class MovieDetailViewController: UIViewController, Storyboarded {
 
 extension MovieDetailViewController: ViewCodeProtocol, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieDetailTableViewCell
-        return cell
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! MovieDetailsFirstSectionTableViewCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieDetailTableViewCell
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

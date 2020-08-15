@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		520A7D8D24E73B740073F04B /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A7D8B24E73B740073F04B /* MovieDetailTableViewCell.swift */; };
 		520A7D8E24E73B740073F04B /* MovieDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520A7D8C24E73B740073F04B /* MovieDetailTableViewCell.xib */; };
 		520A7D8F24E73B7F0073F04B /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A7D8B24E73B740073F04B /* MovieDetailTableViewCell.swift */; };
+		5227FAAD24E7C898007AADF5 /* MovieDetailsFirstSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CC50A24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.swift */; };
+		5227FAAF24E7C8FF007AADF5 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227FAAE24E7C8FF007AADF5 /* MovieDetailViewModel.swift */; };
+		528CC50C24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CC50A24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.swift */; };
+		528CC50D24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528CC50B24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.xib */; };
 		52EA399524E5EF100020AD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA399424E5EF100020AD0D /* AppDelegate.swift */; };
 		52EA399724E5EF100020AD0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA399624E5EF100020AD0D /* SceneDelegate.swift */; };
 		52EA399924E5EF100020AD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA399824E5EF100020AD0D /* ViewController.swift */; };
@@ -48,6 +52,9 @@
 		4A7BE298D5B3EB0141CF4D11 /* Pods-MovieTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieTestTests/Pods-MovieTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		520A7D8B24E73B740073F04B /* MovieDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewCell.swift; sourceTree = "<group>"; };
 		520A7D8C24E73B740073F04B /* MovieDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailTableViewCell.xib; sourceTree = "<group>"; };
+		5227FAAE24E7C8FF007AADF5 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		528CC50A24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsFirstSectionTableViewCell.swift; sourceTree = "<group>"; };
+		528CC50B24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsFirstSectionTableViewCell.xib; sourceTree = "<group>"; };
 		52EA399124E5EF100020AD0D /* MovieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EA399424E5EF100020AD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52EA399624E5EF100020AD0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +108,6 @@
 				4A7BE298D5B3EB0141CF4D11 /* Pods-MovieTestTests.debug.xcconfig */,
 				C698A49503D0F0DD0D38B350 /* Pods-MovieTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				520A7D8C24E73B740073F04B /* MovieDetailTableViewCell.xib */,
+				528CC50B24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		52EA39B924E5EF430020AD0D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				528CC50A24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.swift */,
 				520A7D8B24E73B740073F04B /* MovieDetailTableViewCell.swift */,
 				52EA39BD24E5FEC40020AD0D /* MovieDetailViewController.swift */,
 			);
@@ -198,6 +206,7 @@
 		52EA39BA24E5EF590020AD0D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5227FAAE24E7C8FF007AADF5 /* MovieDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528CC50D24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.xib in Resources */,
 				52EA39A124E5EF150020AD0D /* LaunchScreen.storyboard in Resources */,
 				520A7D8E24E73B740073F04B /* MovieDetailTableViewCell.xib in Resources */,
 				52EA399E24E5EF150020AD0D /* Assets.xcassets in Resources */,
@@ -422,8 +432,10 @@
 				52EA39C224E5FF2A0020AD0D /* Coordinator.swift in Sources */,
 				52EA39BC24E5F2B10020AD0D /* MovieDetailModel.swift in Sources */,
 				52EA39C824E603240020AD0D /* ViewCodeProtocol.swift in Sources */,
+				528CC50C24E79FA1006F4042 /* MovieDetailsFirstSectionTableViewCell.swift in Sources */,
 				520A7D8D24E73B740073F04B /* MovieDetailTableViewCell.swift in Sources */,
 				52EA399524E5EF100020AD0D /* AppDelegate.swift in Sources */,
+				5227FAAF24E7C8FF007AADF5 /* MovieDetailViewModel.swift in Sources */,
 				52EA399724E5EF100020AD0D /* SceneDelegate.swift in Sources */,
 				52EA39D124E60ABD0020AD0D /* MainCoordinator.swift in Sources */,
 				52EA39CB24E607DF0020AD0D /* Storyboarded.swift in Sources */,
@@ -438,6 +450,7 @@
 				52EA39D224E60ABD0020AD0D /* MainCoordinator.swift in Sources */,
 				52EA39C924E603240020AD0D /* ViewCodeProtocol.swift in Sources */,
 				52EA39CC24E607DF0020AD0D /* Storyboarded.swift in Sources */,
+				5227FAAD24E7C898007AADF5 /* MovieDetailsFirstSectionTableViewCell.swift in Sources */,
 				52EA39AC24E5EF150020AD0D /* MovieTestTests.swift in Sources */,
 				520A7D8F24E73B7F0073F04B /* MovieDetailTableViewCell.swift in Sources */,
 				52EA39C324E5FF2A0020AD0D /* Coordinator.swift in Sources */,
