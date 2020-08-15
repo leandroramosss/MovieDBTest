@@ -7,10 +7,3 @@
 //
 
 import Foundation
-
-struct MovieDetailViewModel {
-    
-    var presentData = { () -> () in }
-    
-    var dataArray: [MovieData] = []
-}

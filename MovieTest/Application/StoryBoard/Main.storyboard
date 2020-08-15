@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lbc-u3-8nU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lbc-u3-8nU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="fnA-Df-ptg">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -41,6 +40,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lbc-u3-8nU" firstAttribute="trailing" secondItem="WW8-uJ-WFb" secondAttribute="trailing" id="8T5-Ur-vIP"/>
+                            <constraint firstItem="lbc-u3-8nU" firstAttribute="top" secondItem="HUk-DU-ehd" secondAttribute="top" id="8ff-TG-oWk"/>
+                            <constraint firstItem="lbc-u3-8nU" firstAttribute="leading" secondItem="WW8-uJ-WFb" secondAttribute="leading" id="FlM-Wm-P81"/>
+                            <constraint firstAttribute="bottom" secondItem="lbc-u3-8nU" secondAttribute="bottom" id="i38-gX-s36"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WW8-uJ-WFb"/>
                     </view>
                     <connections>

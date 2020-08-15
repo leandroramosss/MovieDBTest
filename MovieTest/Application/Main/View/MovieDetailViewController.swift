@@ -11,9 +11,9 @@ import UIKit
 class MovieDetailViewController: UIViewController, Storyboarded {
             
     @IBOutlet weak var tableView: UITableView!
-    var tableHeaderHeight:CGFloat = 300.0
+    var tableHeaderHeight:CGFloat = 250
     var headerView: UIView!
-    
+        
     let movieInformationCell = UINib(nibName: "MovieDetailsFirstSectionTableViewCell", bundle: nil)
     let customCell = UINib(nibName: "MovieDetailTableViewCell", bundle: nil)
         
@@ -25,8 +25,9 @@ class MovieDetailViewController: UIViewController, Storyboarded {
         tableView.register(movieInformationCell, forCellReuseIdentifier: "cell2")
         tableView.rowHeight = UITableView.automaticDimension
         headerConfiguration()
+        
     }
-    
+        
     func headerConfiguration() {
         headerView = tableView.tableHeaderView
         tableView.tableHeaderView = nil
