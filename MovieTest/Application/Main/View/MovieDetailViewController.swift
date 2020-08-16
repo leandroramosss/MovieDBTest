@@ -48,11 +48,18 @@ extension MovieDetailViewController: ViewCodeProtocol, UITableViewDelegate, UITa
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! MovieDetailsFirstSectionTableViewCell
+            configureMovieDetailCell(cell: cell, forRowAtIndexPath: indexPath)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieDetailTableViewCell
             return cell
         }
+    }
+    
+    func configureMovieDetailCell(cell: MovieDetailsFirstSectionTableViewCell, forRowAtIndexPath indexPath: IndexPath) {
+        cell.likesLabel.text = "1000"
+        cell.titleLabel.text = "Batman: The Dark Knigths Rise"
+        
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
